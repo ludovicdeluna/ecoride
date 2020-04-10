@@ -11,14 +11,12 @@ module Mutations
     def resolve(**options)
       passenger_ride = DriverRide.new(**options)
       if passenger_ride.save
-        p "okok"
         p passenger_ride
         {
           driver_ride: passenger_ride,
           errors: []
         }
       else
-        p "nono"
         {
           passenger_ride: nil,
           errors: passenger_ride.errors.full_messages
