@@ -179,4 +179,8 @@ C'est parti ! Vous avez 18 minutes pour finir !
 
 Non en fait c'était une blague. Vous prenez le temps que vous voulez pour finir. Juste faut le finir avant l'entretient quoi ... C'est mieux.
 
-Et pour vous motiver, voici un gif rigolo : https://www.google.com/url?sa=i&url=http%3A%2F%2Ffrancheska45.centerblog.net%2Frub-gifs-animes-rigolo-.html&psig=AOvVaw3H3854jaQmZlW4y5OSw61l&ust=1586624590646000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj3z6yr3ugCFQAAAAAdAAAAABAD
+Et pour vous motiver, voici un gif rigolo : 
+
+![alt text](https://lh3.googleusercontent.com/proxy/CxCKNYgzQZvrpANXVc67_o9QMIP1c79o-q8mqlfyrNklsKSEn7OPZ-fdjMF7j-hdeX4aoP272FbMpnG4A7eufOIw4lxB2fioVUuPVOTsLw)
+
+Merci !
