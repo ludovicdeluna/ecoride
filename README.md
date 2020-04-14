@@ -14,7 +14,7 @@ Vous devez avoir `docker` et `docker-compose` installé sur votre ordinateur. Vo
 
 Lancez les commandes suivantes :
 * Lancer le serveur : `docker-compose up`
-  * *La première fois, docker va builder les images. Les fois suivantes, docker va utiliser les images déjà uild. Pour forcer un rebuild, utiliser `docker-compose up --build`*
+  * *La première fois, docker va builder les images. Les fois suivantes, docker va utiliser les images déjà build. Pour forcer un rebuild, utiliser `docker-compose up --build`*
   * Les containers disponibles sont `db` pour la base de donnée postgres, et `web` pour le serveur rails.
 * Créer, migrer et seeder la DB :
   * `docker-compose run web rake db:create`
@@ -177,10 +177,10 @@ C'est parti ! Vous avez 18 minutes pour finir !
 
 (hihi)
 
-Non en fait c'était une blague. Vous prenez le temps que vous voulez pour finir. Juste faut le finir avant l'entretient quoi ... C'est mieux.
+Non en fait c'était une blague. Vous prenez le temps que vous voulez pour finir. Juste faut le finir avant l'entretient.
 
 Et pour vous motiver, voici un gif rigolo : 
 
-![alt text](https://lh3.googleusercontent.com/proxy/CxCKNYgzQZvrpANXVc67_o9QMIP1c79o-q8mqlfyrNklsKSEn7OPZ-fdjMF7j-hdeX4aoP272FbMpnG4A7eufOIw4lxB2fioVUuPVOTsLw)
+![alt text](http://francheska45.f.r.pic.centerblog.net/ea6ae6d2.gif)
 
 Merci !
