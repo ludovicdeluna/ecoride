@@ -2,9 +2,10 @@ require "rails_helper"
 
 RSpec.describe "Ride sharing between a driver and a passenger", :type => :request do
 
-  let(:driver){ User.create(email: "david@email.com") }
-  let(:passenger){User.create(email: "peter@email.com")}
-  let(:ride){Ride.create(departure: "ici", arrival: "la") }
+  let(:network){ Network.create!(name: "network_area") }
+  let(:driver){ User.create!(network: network, email: "david@email.com") }
+  let(:passenger){User.create!(network: network, email: "peter@email.com")}
+  let(:ride){Ride.create!(network: network, departure: "ici", arrival: "la") }
 
   it "creates a Widget and redirects to the Widget's page" do
     post "/graphql", params: {
