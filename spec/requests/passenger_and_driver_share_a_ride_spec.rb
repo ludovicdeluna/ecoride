@@ -62,7 +62,10 @@ RSpec.describe "Ride sharing between a driver and a passenger", :type => :reques
       }"
     }
 
-    p response.body
     expect(PassengerRide.last.driver_ride).to eq(DriverRide.last)
+
+    expect(response.status).to eq(200)
+    response_json = JSON.parse(response.body)
+    expect(response_json.dig("data", "shareRide", "passengerRide", "id")).to eq(PassengerRide.last.id)
   end
 end
