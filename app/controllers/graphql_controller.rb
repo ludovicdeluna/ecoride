@@ -9,6 +9,7 @@ class GraphqlController < ApplicationController
     query = params[:query]
     operation_name = params[:operationName]
     context = {
+      current_network_id: ensure_current_network(request.headers)
       # Query context goes here, for example:
       # current_user: current_user,
     }
@@ -37,6 +38,10 @@ class GraphqlController < ApplicationController
     else
       raise ArgumentError, "Unexpected parameter: #{ambiguous_param}"
     end
+  end
+
+  def ensure_current_network(headers)
+    headers["X-CURRENT-NETWORK"] or raise ArgumentError, "header with X-CURRENT-NETWORK required"
   end
 
   def handle_error_in_development(e)

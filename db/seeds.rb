@@ -3,23 +3,26 @@ PassengerRide.delete_all
 DriverRide.delete_all
 Ride.delete_all
 User.delete_all
+Network.delete_all
 
 # We start by creating some rides,
 # These are the available routes our users will be able to use
-toulouse_intra = Ride.new(departure: "Cite de l'espace", arrival: "Capitole")
-toulouse_navette = Ride.new(departure: "Capitole", arrival: "Aeroport")
-paris_intra = Ride.new(departure: "Louvre", arrival: "Nation")
-paris_suburb = Ride.new(departure: "Clichy", arrival: "Louvre")
+toulouse_network = Network.create!(name: "Toulouse")
+paris_network = Network.create!(name: "Paris")
+toulouse_intra = Ride.create!(network: toulouse_network, departure: "Cite de l'espace", arrival: "Capitole")
+toulouse_navette = Ride.create!(network: toulouse_network, departure: "Capitole", arrival: "Aeroport")
+paris_intra = Ride.create!(network: paris_network, departure: "Louvre", arrival: "Nation")
+paris_suburb = Ride.create!(network: paris_network, departure: "Clichy", arrival: "Louvre")
 
 # Now, some users have signed up to our platform
 # David, with a "D" as in "Driver"
-david = User.new(email: "david@email.com")
+david = User.create!(network: toulouse_network, email: "david@email.com")
 
 # Patrice, with a "P" as in "Passenger"
-patrice = User.new(email: "patrice@email.com")
+patrice = User.create!(network: toulouse_network, email: "patrice@email.com")
 
 # Peter, with a "P" as in "Passenger"
-peter = User.new(email: "peter@email.com")
+peter = User.create!(network: toulouse_network, email: "peter@email.com")
 
 # Next, our users start to use our transport service
 # David inform us that he will drive his car on the toulouse_intra route
